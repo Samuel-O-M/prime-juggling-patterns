@@ -1,21 +1,11 @@
 # ct.py
 # Formula: c_t(n) = sum_{partitions p of n into t distinct parts} [ 1/(t(t+1)) * prod((i+1)/i)^pi ]
 # Usage: python -m src.ct 50
-# Or from src directory: python ct.py 50
 
-import sys
-import os
 import math
+import sys
 from fractions import Fraction
-
-# Handle both direct execution and module execution
-if __name__ == "__main__" and __package__ is None:
-    # Direct execution: add parent directory to path
-    sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
-    from src.tools import get_c_function_value, save_c_function_value, force_save_caches
-else:
-    # Module execution
-    from .tools import get_c_function_value, save_c_function_value, force_save_caches
+from .tools import get_c_function_value, save_c_function_value, force_save_caches
 
 
 def get_max_t(n):
@@ -89,7 +79,7 @@ def main():
     
     compute_ct_up_to(n_val)
     
-    print(f"Done! Data saved to data/c_function_data.json")
+    print(f"Done! Data saved to data/ct_data.json")
 
 
 if __name__ == "__main__":

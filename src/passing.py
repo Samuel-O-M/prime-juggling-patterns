@@ -3,14 +3,7 @@
 # Usage: python -m src.passing 50 3
 
 import sys
-import os
-
-# Handle both direct execution and module execution
-if __name__ == "__main__" and __package__ is None:
-    sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
-    from src.tools import get_prime_pattern_value, save_prime_pattern_value, get_max_computed_n, force_save_caches
-else:
-    from .tools import get_prime_pattern_value, save_prime_pattern_value, get_max_computed_n, force_save_caches
+from .tools import get_prime_pattern_value, save_prime_pattern_value, get_max_computed_n, force_save_caches
 
 from math import comb, factorial
 

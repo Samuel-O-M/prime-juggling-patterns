@@ -1,21 +1,13 @@
 # colored.py
 # Formula (Theorem 4.1 & Prop 4.2):
 # If n is odd: C'(2,n) = sum_m=1^{(n-1)/2} sum_t [ t * c_t(m) * c_t(n-m) ]
-# If n is even: C'(2,n) = sum_t sum_m=1^{n/2-1} [ t * c_t(m) * c_t(n-m) ] 
+# If n is even: C'(2,n) = sum_t sum_m=1^{n/2-1} [ t * c_t(m) * c_t(n-m) ]
 #                        + sum_t [ t * comb(c_t(n/2), 2) + ceil(t/2) * c_t(n/2) ]
 # Usage: python -m src.colored 50
 
 import sys
-import os
-
-# Handle both direct execution and module execution
-if __name__ == "__main__" and __package__ is None:
-    sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
-    from src.tools import get_prime_pattern_value, save_prime_pattern_value, get_max_computed_n, force_save_caches
-    from src.ct import c_t, compute_ct_up_to, get_max_t
-else:
-    from .tools import get_prime_pattern_value, save_prime_pattern_value, get_max_computed_n, force_save_caches
-    from .ct import c_t, compute_ct_up_to, get_max_t
+from .tools import get_prime_pattern_value, save_prime_pattern_value, get_max_computed_n, force_save_caches
+from .ct import c_t, compute_ct_up_to, get_max_t
 
 from math import ceil
 
