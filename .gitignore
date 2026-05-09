@@ -1,0 +1,18 @@
+# Context for AI
+context/
+
+# Python cache
+**/__pycache__/
+
+# Generated data caches (reproducible artifacts)
+data/
+
+# Temporary files (atomic save artifacts)
+**/*.tmp
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.pdf
