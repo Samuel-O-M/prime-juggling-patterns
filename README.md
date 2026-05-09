@@ -14,7 +14,7 @@ and the linear recurrence:
 
 $$h_t(n) = (t+1)[h_{t-1}(n-t) + h_t(n-t)]$$
 
-with $h_0(0) = 1$, yielding $c_t(n) = h_t(n) / t(t+1)$. See `fast-ct/main.tex` for details.
+with $h_0(0) = 1$, yielding $c_t(n) = h_t(n) / t(t+1)$. See `fast-ct/main.pdf` for details.
 
 ## Pattern Variations
 
@@ -100,7 +100,8 @@ To recompute from scratch, delete these files and re-run.
 │   ├── ct_data.json     # Cached c_t(n) values
 │   └── patterns_data.json  # Cached pattern counts
 ├── fast-ct/
-│   └── main.tex         # Paper: "A Faster Way to Compute c_t(n)"
+│   ├── main.tex
+│   └── main.pdf         # Paper: "A Faster Way to Compute c_t(n)"
 └── context/
     └── paper.txt        # Main paper: "Enumerating Prime Patterns in Juggling Variations"
 ```
