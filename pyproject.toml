@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prime-juggling-patterns"
+version = "0.1.0"
+description = "Computation of prime juggling pattern counts for variations of juggling"
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.scripts]
+prime-juggling = "main:generate_data"
