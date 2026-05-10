@@ -26,6 +26,10 @@ def compute_base_up_to(max_n):
         if existing is not None:
             continue
 
+        if n == 1:
+            save_prime_pattern_value("base_state_2ball", n, 1)
+            continue
+
         total = 0
         for t in range(1, get_max_t(n) + 1):
             term1 = t * int(c_t(t, n - t))
